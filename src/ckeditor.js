@@ -2,16 +2,17 @@
  * @license Copyright (c) 2014-2022, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor.js';
-import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
-import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
-import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
-import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
-import Link from '@ckeditor/ckeditor5-link/src/link.js';
-import List from '@ckeditor/ckeditor5-list/src/list.js';
-import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
-import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
-import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Link from '@ckeditor/ckeditor5-link/src/link';
+import List from '@ckeditor/ckeditor5-list/src/list';
+import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 
 class Editor extends ClassicEditor { }
 
@@ -25,7 +26,8 @@ Editor.builtinPlugins = [
 	List,
 	Paragraph,
 	Strikethrough,
-	CodeBlock
+	BlockQuote,
+	SourceEditing
 ];
 
 // Editor configuration.
@@ -40,7 +42,8 @@ Editor.defaultConfig = {
 			'numberedList',
 			'code',
 			'strikethrough',
-			'codeblock'
+			'blockQuote',
+			'sourceEditing'
 		]
 	},
 	heading: {
