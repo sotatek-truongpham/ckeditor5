@@ -4,8 +4,6 @@
  */
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
-import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
-import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
@@ -19,14 +17,12 @@ class Editor extends ClassicEditor { }
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	Bold,
-	Code,
 	Heading,
 	Italic,
 	Link,
 	List,
 	Paragraph,
 	Strikethrough,
-	BlockQuote,
 	SourceEditing
 ];
 
@@ -40,9 +36,7 @@ Editor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'numberedList',
-			'code',
 			'strikethrough',
-			'blockQuote',
 			'sourceEditing'
 		]
 	},
